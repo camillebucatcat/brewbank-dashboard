@@ -1,6 +1,5 @@
 @import "tailwindcss";
 :root {
-  --default-font-family: 'Poppins';
   --background: #ffffff;
   --foreground: #3f3f3f;
 
