@@ -1,18 +1,29 @@
 @import "tailwindcss";
+
+/* use https://www.tailwindshades.com/ to generate color stepper */
+
 :root {
   --background: #ffffff;
   --foreground: #3f3f3f;
-
-  --primary: #346815;
-  --primary-500: #aad095;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-poppins);
-  --color-primary: var(--primary);
-  --color-primary-500: var(--primary-500);
+
+  --color-primary: oklch(69.196% 0.08081 68.986);
+  --color-primary-50: oklch(94.936% 0.0131 71.328);
+  --color-primary-100: oklch(92.102% 0.02117 72.141);
+  --color-primary-200: oklch(86.455% 0.03543 70.121);
+  --color-primary-300: oklch(80.658% 0.05037 71.01);
+  --color-primary-400: oklch(74.942% 0.06514 69.692);
+  --color-primary-500: oklch(69.196% 0.08081 68.986);
+  --color-primary-600: oklch(60.263% 0.0857 67.946);
+  --color-primary-700: oklch(49.474% 0.06889 67.427);
+  --color-primary-800: oklch(38.281% 0.05098 68.721);
+  --color-primary-900: oklch(25.806% 0.03026 70.134);
+  --color-primary-950: oklch(19.294% 0.01897 70.064);
 }
 
 @media (prefers-color-scheme: dark) {
