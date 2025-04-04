@@ -1,5 +1,5 @@
 import React from 'react';
-import { colors } from "@/app/tokens";
+import { backgroundColors, foregroundColors } from "@/app/tokens";
 
 export const Colors = ({
   // primary = false,
@@ -7,11 +7,16 @@ export const Colors = ({
 }) => {
   return (
     <div>
-      {Object.entries(colors).map(([name, className]) => (
+      {Object.entries(backgroundColors).map(([name, className]) => (
         <div key={name}>
-          <div className={`p-10 rounded-lg shadow-md border bg-${className}`}>
+          <div className={`p-10 rounded-lg shadow-md border ${className}`}>
             <p className="mt-2 text-sm font-medium">{name}</p>
           </div>
+        </div>
+      ))}
+      {Object.entries(foregroundColors).map(([name, className]) => (
+        <div key={name}>
+          <p className={`mt-2 text-sm font-medium ${className}`}>{name}</p>
         </div>
       ))}
     </div>
