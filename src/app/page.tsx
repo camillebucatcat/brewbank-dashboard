@@ -5,17 +5,11 @@ export default function Home() {
     <>
       <Heart height="30" width="30"></Heart>
       <h1>Primary</h1>
-      <div className="bg-primary p-10">
-        <p className="font-bold">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
-          corrupti.
-        </p>
+      <div className="bg-brand p-10">
+        <p className="font-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, corrupti.</p>
       </div>
       <div className="bg-red-100 p-10">
-        <p className="text-primary-800">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
-          corrupti.
-        </p>
+        <p className="text-brand-800">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, corrupti.</p>
       </div>
       <h1>Secondary</h1>
       <div className="bg-red p-10">

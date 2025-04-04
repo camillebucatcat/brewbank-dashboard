@@ -3,8 +3,8 @@
 /* use https://www.tailwindshades.com/ to generate color stepper */
 
 :root {
-  --background: #ffffff;
-  --foreground: #3f3f3f;
+  --background: var(--color-brand-50);
+  --foreground: var(--color-neutral-950);
 }
 
 @theme inline {
@@ -116,8 +116,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--color-brand-50);
+    --foreground: var(--color-neutral-950);
   }
 }
 
