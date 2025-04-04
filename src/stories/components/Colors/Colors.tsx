@@ -1,5 +1,5 @@
 import React from 'react';
-import { colors } from "@/styles/tokens";
+import { backgroundColors, foregroundColors } from "@/styles/tokens";
 
 export const Colors = ({
   // primary = false,
@@ -7,23 +7,23 @@ export const Colors = ({
 }) => {
   return (
     <>
-      <h4 className='my-4 font-bold'>Surface colors</h4>
-      <div className='grid grid-cols-7 mb-10'>
-        {Object.entries(colors).map(([name, className]) => (
-          <div key={name}>
-            <div className={`w-20 h-20 bg-${name}`} />
-            <p className="text-sm font-medium">{name}</p>
+      <h4 className='my-4 font-bold'>Colors</h4>
+      <div className='grid grid-cols-12 mb-10'>
+        {Object.entries(backgroundColors).map(([name, className]) => (
+          <div key={name} className='mb-4'>
+            <div className={`w-30 h-20 ${className}`} />
+            <p className="text-xs text-center font-medium">{name}</p>
           </div>
         ))}
         
       </div>
 
-      <h4 className='my-4 font-bold'>Text colors</h4>
-      {Object.entries(colors).map(([name, className]) => (
+      {/* <h4 className='my-4 font-bold'>Text colors</h4>
+      {Object.entries(foregroundColors).map(([name, className]) => (
         <div key={name}>
-          <p className={`mt-2 text-sm font-medium text-${className}`}>{name}</p>
+          <p className={`mt-2 text-sm font-medium ${className}`}>{name}</p>
         </div>
-      ))}
+      ))} */}
     </>
   );
 };
