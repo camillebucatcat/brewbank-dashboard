@@ -11,7 +11,7 @@ export const Colors = ({
       <div className='grid grid-cols-12 mb-10'>
         {Object.entries(backgroundColors).map(([name, className]) => (
           <div key={name} className='mb-4'>
-            <div className={`w-30 h-20 ${className}`} />
+            <div className={`w-30 h-15 ${className}`} />
             <p className="text-xs text-center font-medium">{name}</p>
           </div>
         ))}
