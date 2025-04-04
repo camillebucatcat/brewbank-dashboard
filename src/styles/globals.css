@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-/* use https://www.tailwindshades.com/ to generate color stepper */
-
 :root {
   --background: var(--color-brand-50);
   --foreground: var(--color-neutral-950);
