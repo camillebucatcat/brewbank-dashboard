@@ -1,10 +1,7 @@
 import React from 'react';
-import { backgroundColors, foregroundColors } from "@/styles/tokens";
+import { backgroundColors } from "@/styles/tokens";
 
-export const Colors = ({
-  // primary = false,
-  // ...props
-}) => {
+export const Colors = ({}) => {
   return (
     <>
       <h4 className='my-4 font-bold'>Colors</h4>
@@ -12,12 +9,10 @@ export const Colors = ({
         {Object.entries(backgroundColors).map(([name, className]) => (
           <div key={name} className='mb-4'>
             <div className={`w-30 h-15 ${className}`} />
-            <p className="text-xs text-center font-medium">{name}</p>
+            <p className="mt-2 text-xs text-center font-medium">{name}</p>
           </div>
         ))}
-        
       </div>
-
       {/* <h4 className='my-4 font-bold'>Text colors</h4>
       {Object.entries(foregroundColors).map(([name, className]) => (
         <div key={name}>
