@@ -1,0 +1,27 @@
+.nav-menu li {
+  cursor: pointer;
+  padding: 8px 16px;
+}
+
+/* Horizontal */
+.horizontal .nav-menu {
+}
+
+.horizontal .nav-menu li {
+  display: inline-block;
+}
+
+.horizontal .nav-menu li:not(:first-child),
+.horizontal .nav-menu li:not(:last-child) {
+  margin: 8px;
+}
+
+
+/* Vertical */
+.vertical .nav-menu {
+  width: 100%;
+}
+.vertical .nav-menu li:not(:first-child),
+.vertical .nav-menu li:not(:last-child) {
+  margin: 8px 0;
+}

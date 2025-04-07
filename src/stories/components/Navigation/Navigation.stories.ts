@@ -10,6 +10,10 @@ const meta = {
   },
   tags: ['autodocs'],
   argTypes: {
+    orientation: {
+      options: ['vertical', 'horizontal'],
+      control: { type: 'select' },
+    },
   },
 } satisfies Meta<typeof Navigation>;
 
@@ -18,6 +22,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
+    orientation: 'vertical',
     links: [
       { href: '/', label: 'Dashboard', icon: 'Dashboard' },
       { href: '/menu', label: 'Menu', icon: 'Coffee' },
