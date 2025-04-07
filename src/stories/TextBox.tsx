@@ -18,6 +18,7 @@ export interface TextBoxProps {
   iconStart?: IconNameType;
   iconEnd?: IconNameType;
   disabled?: boolean;
+  inline?: boolean;
   onChange?: () => void;
 }
 
@@ -33,11 +34,17 @@ export const TextBox = ({
   iconStart,
   iconEnd,
   disabled,
+  inline = false,
   ...props
 }: TextBoxProps) => {
   return (
-    <div className="storybook-textbox-container flex-col flex-auto">
-      <label className="label ">{label}</label>
+    <div
+      className={[
+        "storybook-textbox-container",
+        inline ? "inline-textbox" : "",
+      ].join(" ")}
+    >
+      <label className="label">{label}</label>
       <div
         className={["storybook-textbox", `storybook-textbox--${size}`].join(
           " "

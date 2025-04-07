@@ -10,14 +10,9 @@
   border-color: var(--color-brand-700);
 }
 
-.storybook-textbox-container:has(input:is(:disabled), button:is(:disabled)) {
-  border-color: var(--color-brand-700);
-  color: "blue";
-}
 .label {
   color: var(--color-brand);
   font-size: 14px;
-  margin-bottom: 16px;
 }
 .storybook-textbox-container:has(input:is(:disabled)) .label {
   color: var(--color-neutral-700);
@@ -51,4 +46,17 @@
   justify-self: center;
   padding-right: 0;
   padding-left: 8px;
+}
+.storybook-textbox-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.storybook-textbox-container.inline-textbox {
+  align-items: center;
+  flex-direction: row;
+}
+
+.inline-textbox .label {
+  margin-right: 16px;
 }

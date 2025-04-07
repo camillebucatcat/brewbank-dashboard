@@ -40,6 +40,12 @@ export const Default: Story = {
     id: "textbox",
   },
 };
+export const Inline: Story = {
+  args: {
+    label: "Inline",
+    inline: true,
+  },
+};
 
 export const Small: Story = {
   args: {
@@ -68,7 +74,6 @@ export const Large: Story = {
 export const Disabled: Story = {
   args: {
     disabled: true,
-    size: "large",
     label: "Disabled",
     id: "textbox",
   },
