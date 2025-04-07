@@ -21,7 +21,6 @@
 }
 .storybook-textbox-container:has(input:is(:disabled)) .label {
   color: var(--color-neutral-700);
-  font-size: var(--text-small);
 }
 
 .storybook-textbox--small {
@@ -40,12 +39,16 @@
   height: 56px;
 }
 
-.storybook-textbox-icon-start .icon {
+.icon-start {
+  align-self: center;
+  justify-self: center;
   padding-left: 0;
   padding-right: 8px;
 }
 
-.storybook-textbox-icon-end .icon {
+.icon-end {
+  align-self: center;
+  justify-self: center;
   padding-right: 0;
   padding-left: 8px;
 }

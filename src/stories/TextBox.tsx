@@ -15,8 +15,8 @@ export interface TextBoxProps {
   inputType?: "text" | "email" | "phone";
   placeholder?: string;
   maxLength?: number;
-  icon?: IconNameType;
-  iconPosition?: "start" | "end";
+  iconStart?: IconNameType;
+  iconEnd?: IconNameType;
   disabled?: boolean;
   onChange?: () => void;
 }
@@ -30,8 +30,8 @@ export const TextBox = ({
   placeholder,
   status = "default",
   maxLength = 100,
-  icon,
-  iconPosition = "start",
+  iconStart,
+  iconEnd,
   disabled,
   ...props
 }: TextBoxProps) => {
@@ -39,15 +39,13 @@ export const TextBox = ({
     <div className="storybook-textbox-container flex-col flex-auto">
       <label className="label ">{label}</label>
       <div
-        className={[
-          "storybook-textbox",
-          `storybook-textbox--${size}`,
-          iconPosition == "start" ? "flex-row" : "flex-row-reverse",
-        ].join(" ")}
+        className={["storybook-textbox", `storybook-textbox--${size}`].join(
+          " "
+        )}
       >
-        {icon && iconPosition && (
-          <div className="icon">
-            <Image src={icons[icon]} alt="" />
+        {iconStart && (
+          <div className="icon-start">
+            <Image src={icons[iconStart]} alt="" />
           </div>
         )}{" "}
         <input
@@ -59,6 +57,11 @@ export const TextBox = ({
           maxLength={maxLength}
           disabled={disabled}
         ></input>
+        {iconEnd && (
+          <div className="icon-end">
+            <Image src={icons[iconEnd]} alt="" />
+          </div>
+        )}{" "}
       </div>
     </div>
   );

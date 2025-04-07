@@ -17,7 +17,11 @@ const meta = {
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
     backgroundColor: { control: "color" },
-    icon: {
+    iconStart: {
+      options: ["", ...Object.keys(icons)],
+      control: { type: "select" },
+    },
+    iconEnd: {
       options: ["", ...Object.keys(icons)],
       control: { type: "select" },
     },
@@ -40,7 +44,7 @@ export const Default: Story = {
 export const Small: Story = {
   args: {
     size: "small",
-    label: "TextBox",
+    label: "Small",
     id: "textbox",
   },
 };
@@ -48,7 +52,7 @@ export const Small: Story = {
 export const Medium: Story = {
   args: {
     size: "medium",
-    label: "TextBox",
+    label: "Medium",
     id: "textbox",
   },
 };
@@ -56,7 +60,7 @@ export const Medium: Story = {
 export const Large: Story = {
   args: {
     size: "large",
-    label: "TextBox",
+    label: "Large",
     id: "textbox",
   },
 };
@@ -65,7 +69,21 @@ export const Disabled: Story = {
   args: {
     disabled: true,
     size: "large",
-    label: "TextBox",
+    label: "Disabled",
     id: "textbox",
+  },
+};
+
+export const IconStart: Story = {
+  args: {
+    label: "Icon Start",
+    iconStart: "Heart",
+  },
+};
+
+export const IconEnd: Story = {
+  args: {
+    label: "Icon End",
+    iconEnd: "Heart",
   },
 };
