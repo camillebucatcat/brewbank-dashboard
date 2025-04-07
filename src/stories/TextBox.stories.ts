@@ -60,3 +60,12 @@ export const Large: Story = {
     id: "textbox",
   },
 };
+
+export const Disabled: Story = {
+  args: {
+    disabled: true,
+    size: "large",
+    label: "TextBox",
+    id: "textbox",
+  },
+};

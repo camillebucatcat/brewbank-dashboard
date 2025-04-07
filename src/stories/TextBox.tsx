@@ -17,6 +17,7 @@ export interface TextBoxProps {
   maxLength?: number;
   icon?: IconNameType;
   iconPosition?: "start" | "end";
+  disabled?: boolean;
   onChange?: () => void;
 }
 
@@ -31,13 +32,12 @@ export const TextBox = ({
   maxLength = 100,
   icon,
   iconPosition = "start",
+  disabled,
   ...props
 }: TextBoxProps) => {
   return (
-    <div className="flex-col flex-auto">
-      <label className="block text-gray-700 text-sm font-bold mb-2">
-        {label}
-      </label>
+    <div className="storybook-textbox-container flex-col flex-auto">
+      <label className="label ">{label}</label>
       <div
         className={[
           "storybook-textbox",
@@ -57,6 +57,7 @@ export const TextBox = ({
           placeholder={placeholder}
           onChange={props?.onChange}
           maxLength={maxLength}
+          disabled={disabled}
         ></input>
       </div>
     </div>
