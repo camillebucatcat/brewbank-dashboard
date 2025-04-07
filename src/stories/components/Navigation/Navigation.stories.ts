@@ -31,13 +31,24 @@ export const Default: Story = {
   },
 };
 
-export const Horizonal: Story = {
+export const Horizonal : Story = {
   args: {
     orientation: 'horizontal',
     links: [
       { href: '/', label: 'Dashboard', icon: 'Dashboard' },
       { href: '/menu', label: 'Menu', icon: 'Coffee' },
       { href: '/report', label: 'Report', icon: 'ClipboardText' },
+    ],
+  },
+};
+
+export const Active: Story = {
+  args: {
+    orientation: 'horizontal',
+    links: [
+      { id:'dashboard', href: '/', label: 'Dashboard', icon: 'Dashboard' },
+      { id: 'coffee', href: '/menu', label: 'Menu', icon: 'Coffee' },
+      { id: 'clipboard', href: '/report', label: 'Report', icon: 'ClipboardText' },
     ],
   },
 };
