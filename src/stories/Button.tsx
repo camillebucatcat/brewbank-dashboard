@@ -1,7 +1,9 @@
 import React from 'react';
 
 import './button.css';
-import * as icons from '@/assets/svg';
+import * as icons from '@/assets/svg/index';
+
+import Image from 'next/image';
 
 type IconNameType = keyof typeof icons;
 
@@ -29,6 +31,8 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const Icon = rightIcon && icons[rightIcon];
+  console.log(icons, Icon)
   return (
     <button
       type="button"
@@ -41,7 +45,7 @@ export const Button = ({
           background-color: ${backgroundColor};
         }
       `}</style>
-      {rightIcon}
+      <Image src={Icon} alt=""/>
     </button>
   );
 };
