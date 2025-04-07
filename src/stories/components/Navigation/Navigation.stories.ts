@@ -12,7 +12,7 @@ const meta = {
   argTypes: {
     orientation: {
       options: ['vertical', 'horizontal'],
-      control: { type: 'select' },
+      control: { type: 'radio' },
     },
   },
 } satisfies Meta<typeof Navigation>;
@@ -20,9 +20,20 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {
     orientation: 'vertical',
+    links: [
+      { href: '/', label: 'Dashboard', icon: 'Dashboard' },
+      { href: '/menu', label: 'Menu', icon: 'Coffee' },
+      { href: '/report', label: 'Report', icon: 'ClipboardText' },
+    ],
+  },
+};
+
+export const Horizonal: Story = {
+  args: {
+    orientation: 'horizontal',
     links: [
       { href: '/', label: 'Dashboard', icon: 'Dashboard' },
       { href: '/menu', label: 'Menu', icon: 'Coffee' },
