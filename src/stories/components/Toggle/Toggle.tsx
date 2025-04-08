@@ -34,6 +34,7 @@ export const Toggle = ({
             onChange={handleToggle}
             disabled={disabled}
             checked={checked}
+            tabIndex={-1}
           />
         </div>
         <label className={clsx("font-medium ml-3 text-sm", disabled ? "opacity-50" : "", labelCSS)}>{label}</label>
