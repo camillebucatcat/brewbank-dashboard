@@ -1,6 +1,6 @@
 .toggle-input-container {
-  width: 50px;
-  height: 25px;
+  width: 40px;
+  height: 24px;
   border-radius: 42px;
   background-color: var(--color-neutral-800);
   display: flex;
@@ -18,8 +18,8 @@
 }
 
 .toggle-indicator {
-  width: 20px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   border-radius: 42px;
   background-color: var(--color-white);
   position: absolute;
@@ -28,7 +28,7 @@
 }
 
 .checked .toggle-indicator {
-  transform: translateX(22px);
+  transform: translateX(16px);
 }
 
 input {

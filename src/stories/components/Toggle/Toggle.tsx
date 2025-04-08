@@ -18,7 +18,6 @@ export const Toggle = ({
   disabled,
   labelCSS,
 }: ToggleProps) => {
-  // const [focused, setFocused] = useState(false);
   const [isChecked, setChecked] = useState(checked);
 
   const handleToggle = () => {
@@ -37,7 +36,7 @@ export const Toggle = ({
             checked={checked}
           />
         </div>
-        <label className={clsx("font-medium ml-3", disabled ? "opacity-50" : "", labelCSS)}>{label}</label>
+        <label className={clsx("font-medium ml-3 text-sm", disabled ? "opacity-50" : "", labelCSS)}>{label}</label>
       </label>
     </>
   );
