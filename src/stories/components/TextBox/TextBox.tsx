@@ -66,7 +66,7 @@ export const TextBox = ({
         ></input>
         {iconEnd && (
           <div className="icon-end">
-            <Image src={icons[iconEnd]} alt="" />
+            <Image src={icons[iconEnd]} width={24} height={24} alt="" />
           </div>
         )}{" "}
       </div>
