@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "../styles/globals.css";
+import { Navigation } from "@/stories/components/Navigation/Navigation";
 
 const poppins = Poppins({
   variable: "--font-poppins",
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  style: ['normal', 'italic'],
-  subsets: ['latin'],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -21,9 +22,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.variable} ${poppins.variable} antialiased`}
-      >
+      <Navigation
+        links={[
+          {
+            href: "/dashboard",
+            icon: "Dashboard",
+            id: "dashboard",
+            label: "Dashboard",
+          },
+          {
+            href: "/menu",
+            icon: "Coffee",
+            id: "coffee",
+            label: "Menu",
+          },
+          {
+            href: "/report",
+            icon: "ClipboardText",
+            id: "clipboard",
+            label: "Report",
+          },
+        ]}
+        orientation="vertical"
+      />
+      <body className={`${poppins.variable} ${poppins.variable} antialiased`}>
         {children}
       </body>
     </html>
