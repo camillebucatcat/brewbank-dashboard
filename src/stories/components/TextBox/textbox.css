@@ -37,15 +37,11 @@
 .icon-start {
   align-self: center;
   justify-self: center;
-  padding-left: 0;
-  padding-right: 8px;
 }
 
 .icon-end {
   align-self: center;
   justify-self: center;
-  padding-right: 0;
-  padding-left: 8px;
 }
 .storybook-textbox-container {
   display: flex;
@@ -59,4 +55,9 @@
 
 .inline-textbox .label {
   margin-right: 16px;
+}
+
+.input {
+  width: 100%;
+  padding: 0 8px;
 }
