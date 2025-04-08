@@ -40,7 +40,7 @@ export default function (plop) {
     actions: [
       {
         type: 'add',
-        path: 'src/app/{{directory}}/{{pascalCase namespace}}.tsx',
+        path: 'src/app/{{directory}}/{{dashCase namespace}}.tsx',
         templateFile: 'src/codegen/screen.hbs',
       },
     ],
