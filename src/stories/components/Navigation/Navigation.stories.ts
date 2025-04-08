@@ -24,20 +24,31 @@ export const Default: Story = {
   args: {
     orientation: 'vertical',
     links: [
-      { href: '/', label: 'Dashboard', icon: 'Dashboard' },
-      { href: '/menu', label: 'Menu', icon: 'Coffee' },
-      { href: '/report', label: 'Report', icon: 'ClipboardText' },
+      { id:'dashboard', href: '/', label: 'Dashboard', icon: 'Dashboard' },
+      { id: 'coffee', href: '/menu', label: 'Menu', icon: 'Coffee' },
+      { id: 'clipboard', href: '/report', label: 'Report', icon: 'ClipboardText' },
     ],
   },
 };
 
-export const Horizonal : Story = {
+export const Vertical : Story = {
+  args: {
+    orientation: 'vertical',
+    links: [
+      { id:'dashboard', href: '/', label: 'Dashboard', icon: 'Dashboard' },
+      { id: 'coffee', href: '/menu', label: 'Menu', icon: 'Coffee' },
+      { id: 'clipboard', href: '/report', label: 'Report', icon: 'ClipboardText' },
+    ],
+  },
+};
+
+export const Horizontal : Story = {
   args: {
     orientation: 'horizontal',
     links: [
-      { href: '/', label: 'Dashboard', icon: 'Dashboard' },
-      { href: '/menu', label: 'Menu', icon: 'Coffee' },
-      { href: '/report', label: 'Report', icon: 'ClipboardText' },
+      { id:'dashboard', href: '/', label: 'Dashboard', icon: 'Dashboard' },
+      { id: 'coffee', href: '/menu', label: 'Menu', icon: 'Coffee' },
+      { id: 'clipboard', href: '/report', label: 'Report', icon: 'ClipboardText' },
     ],
   },
 };

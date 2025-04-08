@@ -1,9 +1,11 @@
 import React from 'react';
+import Image from 'next/image';
+import clsx from 'clsx';
+import { useRouter } from 'next/router';
+
 import * as icons from '@/assets/svg/index';
 import './navigation.css';
 
-import Image from 'next/image';
-import clsx from 'clsx';
 type IconNameType = keyof typeof icons;
 
 export interface NavigationLinkProps {
@@ -11,7 +13,6 @@ export interface NavigationLinkProps {
   label?: string;
   href?: string;
   icon?: IconNameType;
-  isActive?: boolean;
 }
 
 /** Primary UI component for user interaction */
@@ -20,9 +21,10 @@ export const NavigationLink = ({
   label,
   href,
   icon,
-   isActive = false
 }: NavigationLinkProps) => {
   const Icon = icon && icons[icon];
+  const router = useRouter();
+  const isActive = router.pathname === href;
 
   return (
     <>
