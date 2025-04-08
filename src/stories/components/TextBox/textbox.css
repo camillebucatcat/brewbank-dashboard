@@ -1,0 +1,62 @@
+.storybook-textbox {
+  border-color: var(--color-neutral-300);
+  border-width: 1px;
+  border-radius: 8px;
+  color: var(--color-brand);
+  display: flex;
+}
+
+.storybook-textbox:focus-within {
+  border-color: var(--color-brand-700);
+}
+
+.label {
+  color: var(--color-brand);
+  font-size: 14px;
+}
+.storybook-textbox-container:has(input:is(:disabled)) .label {
+  color: var(--color-neutral-700);
+}
+
+.storybook-textbox--small {
+  padding: 10px 16px;
+  font-size: 12px;
+  height: 40px;
+}
+.storybook-textbox--medium {
+  padding: 11px 20px;
+  font-size: 14px;
+  height: 43px;
+}
+.storybook-textbox--large {
+  padding: 12px 24px;
+  font-size: 16px;
+  height: 56px;
+}
+
+.icon-start {
+  align-self: center;
+  justify-self: center;
+  padding-left: 0;
+  padding-right: 8px;
+}
+
+.icon-end {
+  align-self: center;
+  justify-self: center;
+  padding-right: 0;
+  padding-left: 8px;
+}
+.storybook-textbox-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.storybook-textbox-container.inline-textbox {
+  align-items: center;
+  flex-direction: row;
+}
+
+.inline-textbox .label {
+  margin-right: 16px;
+}
