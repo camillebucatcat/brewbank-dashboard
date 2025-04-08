@@ -35,14 +35,41 @@ export const Labeled: Story = {
   },
 };
 
+
 export const Checked: Story = {
+  name: "State: Checked",
   args: {
     checked: true,
   },
 };
 
-export const Disabled: Story = {
+export const Unchecked: Story = {
+  name: "State: Unchecked",
   args: {
+    checked: false,
+  },
+};
+
+export const Disabled: Story = {
+  name: "State: Disabled",
+  args: {
+    disabled: true,
+  },
+};
+
+
+export const CheckedDisabled: Story = {
+  name: "State: Checked, disabled",
+  args: {
+    checked: true,
+    disabled: true,
+  },
+};
+
+export const UncheckDisabled: Story = {
+  name: "State: Unchecked, disabled",
+  args: {
+    checked: false,
     disabled: true,
   },
 };
