@@ -1,0 +1,47 @@
+.toggle-input-container {
+  width: 40px;
+  height: 20px;
+  /* height: 24px; */
+  border-radius: 42px;
+  background-color: var(--color-neutral-800);
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  position: relative;
+}
+
+.toggle-input-container.checked {
+  background-color: var(--color-brand-950);
+}
+
+.toggle-input-container.disabled {
+  opacity: .5;
+}
+
+.toggle-indicator {
+  width: 16px;
+  height: 14px;
+  /* height: 16px; */
+  border-radius: 42px;
+  background-color: var(--color-white);
+  position: absolute;
+  transform: translateX(0px);
+  transition: all 250ms ease-in-out;
+}
+
+.checked .toggle-indicator {
+  transform: translateX(16px);
+  /* transform: translateX(16px); */
+}
+
+input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.toggle-input-container.disabled input {
+  cursor: not-allowed;
+}
