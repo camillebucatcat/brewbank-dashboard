@@ -1,6 +1,6 @@
-import React from 'react';
-import { NavigationLink, NavigationLinkProps } from './NavigationLink';
-import './navigation.css';
+import React from "react";
+import { NavigationLink, NavigationLinkProps } from "./NavigationLink";
+import "./navigation.css";
 
 export interface NavigationProps {
   links: NavigationLinkProps[];
@@ -9,11 +9,11 @@ export interface NavigationProps {
 
 export const Navigation = ({
   links,
-  orientation = 'vertical',
+  orientation = "vertical",
 }: NavigationProps) => {
   return (
     <nav className={`${orientation}`}>
-      <ul className='nav-menu'>
+      <ul className="nav-menu">
         {links.map((link) => (
           <NavigationLink key={link.href} {...link} />
         ))}
