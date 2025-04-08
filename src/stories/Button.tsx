@@ -1,6 +1,11 @@
 import React from 'react';
 
 import './button.css';
+import * as icons from '@/assets/svg/index';
+
+import Image from 'next/image';
+
+type IconNameType = keyof typeof icons;
 
 export interface ButtonProps {
   /** Is this the principal call to action on the page? */
@@ -13,6 +18,7 @@ export interface ButtonProps {
   label: string;
   /** Optional click handler */
   onClick?: () => void;
+  rightIcon?: IconNameType;
 }
 
 /** Primary UI component for user interaction */
@@ -21,9 +27,12 @@ export const Button = ({
   size = 'medium',
   backgroundColor,
   label,
+  rightIcon,
   ...props
 }: ButtonProps) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const Icon = rightIcon && icons[rightIcon];
+  console.log(icons, Icon)
   return (
     <button
       type="button"
@@ -36,6 +45,7 @@ export const Button = ({
           background-color: ${backgroundColor};
         }
       `}</style>
+      <Image src={Icon} alt=""/>
     </button>
   );
 };
