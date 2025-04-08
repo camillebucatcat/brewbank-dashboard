@@ -37,6 +37,8 @@ export const TextBox = ({
   inline = false,
   ...props
 }: TextBoxProps) => {
+  const iconSize = size == "small" ? 16 : size == "medium" ? 18 : 20;
+
   return (
     <div
       className={[
@@ -66,7 +68,12 @@ export const TextBox = ({
         ></input>
         {iconEnd && (
           <div className="icon-end">
-            <Image src={icons[iconEnd]} width={24} height={24} alt="" />
+            <Image
+              src={icons[iconEnd]}
+              width={iconSize}
+              height={iconSize}
+              alt=""
+            />
           </div>
         )}{" "}
       </div>
