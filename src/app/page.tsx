@@ -1,29 +1,36 @@
-import { Heart } from "@/assets/svg/index";
+import React from "react";
+import { Heart } from "@/assets/svg";
+import { Navigation } from "@/stories/components/Navigation/Navigation";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-      <Heart height="30" width="30"></Heart>
-      <h1>Primary</h1>
-      <div className="bg-brand p-10">
-        <p className="font-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, corrupti.</p>
-      </div>
-      <div className="bg-red-100 p-10">
-        <p className="text-brand-800">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, corrupti.</p>
-      </div>
-      <h1>Secondary</h1>
-      <div className="bg-red p-10">
-        <p className="font-bold text-success">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
-          corrupti.
-        </p>
-      </div>
-      <div className="bg-secondary-50 p-10">
-        <p className="text-secondary-800">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
-          corrupti.
-        </p>
-      </div>
+      {/* <Heart height="30" width="30"></Heart> */}
+      <Image src={Heart} height="20" width="20" alt="icon" />
+      <Navigation
+        links={[
+          {
+            href: '/',
+            icon: 'Dashboard',
+            id: 'dashboard',
+            label: 'Dashboard'
+          },
+          {
+            href: '/menu',
+            icon: 'Coffee',
+            id: 'coffee',
+            label: 'Menu'
+          },
+          {
+            href: '/report',
+            icon: 'ClipboardText',
+            id: 'clipboard',
+            label: 'Report'
+          }
+        ]}
+        orientation="vertical"
+      />
     </>
   );
 }

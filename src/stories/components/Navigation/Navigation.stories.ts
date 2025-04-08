@@ -24,7 +24,7 @@ export const Default: Story = {
   args: {
     orientation: 'vertical',
     links: [
-      { id:'dashboard', href: '/', label: 'Dashboard', icon: 'Dashboard' },
+      { id: 'dashboard', href: '/', label: 'Dashboard', icon: 'Dashboard' },
       { id: 'coffee', href: '/menu', label: 'Menu', icon: 'Coffee' },
       { id: 'clipboard', href: '/report', label: 'Report', icon: 'ClipboardText' },
     ],
