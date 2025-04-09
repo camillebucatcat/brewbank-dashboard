@@ -37,7 +37,7 @@ export const Toggle = ({
             tabIndex={-1}
           />
         </div>
-        <label className={clsx("font-medium ml-3 text-sm", disabled ? "opacity-50" : "", labelCSS)}>{label}</label>
+        <label onClick={handleToggle} className={clsx("font-medium ml-3 text-sm cursor-pointer", disabled ? "opacity-50" : "", labelCSS)}>{label}</label>
       </label>
     </>
   );
