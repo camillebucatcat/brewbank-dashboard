@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./container.css";
 
 :root {
   --background: var(--color-brand-50);
